@@ -1,12 +1,12 @@
-<script setup>
-import { Head } from '@inertiajs/vue3';
-defineProps(['title'])
+<script setup lang="ts">
+defineProps<{
+    title?: string
+}>()
 </script>
 
 <template>
-    <Head :title="title" />
     <div>
-        <h1>{{ title }}</h1>
+        <h1 class="mx-auto">{{ title }}</h1>
     </div>
 </template>
 
