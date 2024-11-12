@@ -1,11 +1,5 @@
-<script>
-
-
-export default {
-    props: {
-        title: String
-    },
-}
+<script setup>
+defineProps(['title'])
 </script>
 
 <template>

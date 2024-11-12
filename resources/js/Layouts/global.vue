@@ -2,8 +2,8 @@
     <main>
         <header>
             <inertia-link href="/">Главная</inertia-link>
-            <inertia-link href="/about">О нас</inertia-link>
-            <inertia-link href="/contact">Контакты</inertia-link>
+            <inertia-link href="/">О нас</inertia-link>
+            <inertia-link href="/">Контакты</inertia-link>
         </header>
         <article>
             <slot />
