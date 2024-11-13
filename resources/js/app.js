@@ -14,5 +14,7 @@ createInertiaApp({
             .use(plugin)
             .mount(el)
     },
+}).then(r => {
+    console.log(r)
 })
 
