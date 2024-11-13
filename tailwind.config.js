@@ -6,6 +6,7 @@ export default {
         "./resources/**/*.vue",
     ],
     theme: {
+        darkMode: 'selector',
         screens: {
             sm: '480px',
             md: '768px',
@@ -15,6 +16,8 @@ export default {
         colors: {
             'blue': '#1fb6ff',
             'purple': '#7e5bef',
+            'red': '#e3342f',
+            'teal': '#4dc0b5',
             'pink': '#ff49db',
             'orange': '#ff7849',
             'green': '#13ce66',

@@ -1,14 +1,9 @@
-import { defineConfig } from 'vite';
+import {defineConfig} from 'vite';
 import laravel from 'laravel-vite-plugin';
 import vue from '@vitejs/plugin-vue'
 import path from 'path'
 
 export default defineConfig({
-    server: {
-        hmr: {
-            host: 'localhost'
-        }
-    },
     plugins: [
         laravel({
             input: ['resources/less/app.less', 'resources/js/app.js'],

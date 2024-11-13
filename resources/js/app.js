@@ -1,24 +1,18 @@
 import {createApp, h} from 'vue'
-import {App, plugin} from '@inertiajs/inertia-vue3'
+import {createInertiaApp} from '@inertiajs/vue3'
 import global from "./Layouts/global.vue";
+import {resolvePageComponent} from "laravel-vite-plugin/inertia-helpers";
 
-const el = document.getElementById('app')
-
-createApp({
-    render: () => h(App, {
-        initialPage: JSON.parse(el.dataset.page),
-        resolveComponent: name => import(`./Pages/${name}.vue`)
-            .then(({default: page}) => {
-                if (page.layout === undefined) {
-                    page.layout = global
-                }
-                return page
-            })
-    })
-}).use(plugin).mount(el)
-
-import {InertiaProgress} from '@inertiajs/progress'
-
-InertiaProgress.init()
-
+createInertiaApp({
+    resolve: async name => {
+        const page = await resolvePageComponent(`./Pages/${name}.vue`, import.meta.glob("./Pages/**/*.vue"));
+        page.default.layout ??= global;
+        return page;
+    },
+    setup({el, App, props, plugin}) {
+        createApp({render: () => h(App, props)})
+            .use(plugin)
+            .mount(el)
+    },
+})
 
