@@ -6,7 +6,6 @@ export default {
         "./resources/**/*.vue",
     ],
     theme: {
-        darkMode: 'selector',
         screens: {
             sm: '480px',
             md: '768px',

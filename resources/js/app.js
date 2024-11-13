@@ -15,6 +15,7 @@ createInertiaApp({
             .mount(el)
     },
 }).then(r => {
-    console.log(r)
+    console.log('app.js')
 })
+    .catch(e => console.error(e))
 

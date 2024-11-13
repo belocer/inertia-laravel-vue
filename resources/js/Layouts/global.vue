@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import {ref, watch} from 'vue'
-import {Head, Link} from "@inertiajs/vue3";
+import {Link} from "@inertiajs/vue3";
 
 const props = defineProps<{
     title?: string
@@ -15,7 +15,6 @@ watch(title, async (new_val, old_val) => {
 </script>
 
 <template>
-    <Head :title="title"/>
     <main class="container mx-auto">
         <header>
             <nav class="flex justify-center space-x-4">
