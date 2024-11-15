@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
     content: [
         "./resources/**/*.blade.php",
@@ -6,6 +7,7 @@ export default {
         "./resources/**/*.vue",
     ],
     theme: {
+        darkMode: 'selector',
         screens: {
             sm: '480px',
             md: '768px',
@@ -22,7 +24,11 @@ export default {
             'green': '#13ce66',
             'yellow': '#ffc82c',
             'gray-dark': '#273444',
-            'gray': '#8492a6',
+            gray: {
+                200: '#adbcd0',
+                500: '#8492a6',
+                800: '#566273',
+            },
             'gray-light': '#d3dce6',
         },
         fontFamily: {
